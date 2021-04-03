@@ -1,0 +1,75 @@
+@use 'components';
+@import 'devices.scss';
+html::-webkit-scrollbar {
+  display: none;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+* {
+  box-sizing: content-box;
+  scrollbar-width: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+html {
+  @include for-phone-only {
+    font-size: 100%;
+  }
+  font-size: 125%;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+}
+
+#app {
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  box-sizing: border-box;
+  height: auto;
+  width: 100%;
+}
+.bg {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Segue UI, sans-serif;
+  font-weight: 700;
+}
+h1 {
+  font-size: 2.8rem;
+  font-weight: 400;
+}
+h2 {
+  font-size: 1.5rem;
+}
+
+button {
+  font-size: 100%;
+}
+section {
+  margin-top: 7.5rem;
+  width: 100%;
+  @include for-tablet-landscape-up {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.text-display {
+  margin-top: 2rem;
+  box-shadow: 0 5px 20px -1px rgba(0, 0, 0, 0.11);
+  padding: 2rem;
+}
